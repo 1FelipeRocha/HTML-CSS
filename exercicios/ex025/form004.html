@@ -9,13 +9,20 @@
 <body>
     <h1>exemplo de formulario</h1>
     <form action="" method="get" autocomplete="on">
-
-        <p>
-            <label for="email"> Email</label>
-            <input type="email" name="email" id="email" required autocomplete="email">
-        </p>
-        <p><label for="tel">Telefone</label></p>
-            <input type="tel" name="tel" id="tel" autocomplete="tel" required pattern="^/d{">
+         <fieldset>
+            <legend>Dados pessoais</legend>
+             <p>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" minlength="5" maxlength="20" required>
+             </p>   
+             
+                     <p>
+                <label for="email"> Email</label>
+                <input type="email" name="email" id="email" required autocomplete="email">
+                     </p>
+                     <p><label for="tel">Telefone</label>
+                <input type="tel" name="tel" id="tel" autocomplete="tel" required pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxx-xxxx"></p>
+         </fieldset>
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
